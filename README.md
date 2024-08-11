@@ -1,29 +1,3 @@
-
-# vue-tudo
-
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
-=======
 # ToDO App
 
 ## A Simple To - Do Website written using Vue 3!
@@ -60,3 +34,30 @@ Vue.js to-do list app with theme switching, input validation, task management, a
 
 
 4073fba9286ed20e435aa786e84d65887dbf3e96
+
+
+# vue-tudo
+
+## Project setup
+```
+npm install
+```
+
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
+
+### Compiles and minifies for production
+```
+npm run build
+```
+
+### Lints and fixes files
+```
+npm run lint
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
+=======
