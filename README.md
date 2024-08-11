@@ -1,4 +1,4 @@
-# ToDO App
+# TODO App
 
 ## A Simple To - Do Website written using Vue 3!
 
