@@ -1,0 +1,258 @@
+$darkColor: #111;
+$lightColor: #ffffff;
+$primaryColor: #0b3040;
+$secondaryColor: #525354;
+$accentColor: #6a9eb4;
+$doneColor: rgb(75, 168, 95);
+$hoverScale: 1.1;
+$shadowColor: #ffffff;
+$inputBgColor: #cff1ff;
+$inputTextColor: black;
+$buttonBgColorDark: #1a2f38;
+$cursorColorDarker: #01394c;
+
+.wrapper {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  min-height: 100%;
+  max-height: 10000px;
+  font-family: "Work Sans", sans-serif;
+  font-weight: bold;
+  color: $lightColor;
+  scroll-behavior: smooth;
+}
+
+.appBlock {
+  text-align: center;
+  width: 100%;
+
+  .themeBlock {
+    display: flex;
+    justify-content: flex-end;
+    margin: 30px;
+
+    .defaultThemeButton {
+      background: linear-gradient(to right, $secondaryColor, $primaryColor);
+      color: red;
+    }
+
+    .lightThemeButton {
+      background: linear-gradient(to right, $lightColor, $accentColor);
+    }
+
+    .darkThemeButton {
+      background: linear-gradient(to right, $darkColor, $primaryColor);
+    }
+
+    button {
+      width: 40px;
+      height: 40px;
+      margin: 5px;
+      border-radius: 50%;
+      border: 1px solid #222;
+      transition: transform 50ms ease;
+
+      &:hover {
+        transform: scale($hoverScale);
+        box-shadow: 0px 0px 2px 2px $shadowColor;
+      }
+    }
+  }
+
+  .titleBlock {
+    margin: 0 auto;
+    padding: 10px;
+    font-size: 48px;
+    letter-spacing: 5px;
+    border-right: solid 3px #333;
+    overflow: hidden;
+    white-space: pre;
+    animation: text 2s steps(12, end) 0.5s 1 normal both,
+      cursor 750ms steps(12, end) infinite;
+
+    @keyframes text {
+      from {
+        width: 0%;
+      }
+      to {
+        width: 510px;
+      }
+    }
+
+    @keyframes cursor {
+      from {
+        border-right-color: $darkColor;
+      }
+      to {
+        border-right-color: transparent;
+      }
+    }
+
+    @keyframes darker-animated-cursor {
+      from {
+        border-right-color: $cursorColorDarker;
+      }
+      to {
+        border-right-color: transparent;
+      }
+    }
+  }
+
+  .inputBlock {
+    display: flex;
+    justify-content: center;
+    margin: 30px 16px 10px;
+
+    #addInput {
+      width: 500px;
+      height: 40px;
+      padding: 16px;
+      font-size: 20px;
+      border: none;
+      border-radius: 25px 0 0 25px;
+      background: $darkColor;
+      color: $lightColor;
+    }
+
+    #addButton {
+      min-width: 100px;
+      font-size: 18px;
+      border: none;
+      border-radius: 0 25px 25px 0;
+    }
+  }
+
+  .errorBlock {
+    height: 40px;
+    position: relative;
+
+    .error {
+      color: orange;
+      margin: 10px;
+    }
+  }
+
+  .infoBlock {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    font-size: 18px;
+
+    span {
+      padding: 0 20px;
+    }
+  }
+
+  .todoBlock {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: fit-content;
+    min-width: 200px;
+    margin: 14px auto;
+    padding: 0 15px;
+    border-radius: 50px;
+    background: $darkColor;
+    transition: background 500ms;
+
+    &.done {
+      background: $doneColor;
+      color: $darkColor;
+      border: none;
+      text-decoration: line-through $darkColor solid 2px;
+    }
+
+    .options {
+      display: flex;
+
+      button {
+        width: 40px;
+        height: 40px;
+        margin: 5px;
+        border-radius: 20px;
+
+        .fas {
+          font-size: 20px;
+          color: $darkColor;
+        }
+      }
+    }
+  }
+
+  .footer {
+    position: fixed;
+    bottom: 0;
+  }
+}
+
+.defaultTheme {
+  background: linear-gradient(to right, $secondaryColor, $primaryColor);
+  transition: background 500ms !important;
+}
+
+.lightTheme {
+  background: linear-gradient(to right top, $lightColor, $accentColor);
+  color: $darkColor;
+  transition: background 500ms !important;
+
+  .infoBlock {
+    color: $darkColor;
+  }
+
+  .error {
+    color: rgb(48, 48, 48);
+    margin: 10px;
+  }
+
+  .todoBlock {
+    color: $lightColor;
+    border: none;
+    background: $accentColor;
+  }
+
+  #addInput {
+    background: $inputBgColor !important;
+    color: $inputTextColor !important;
+  }
+
+  #addButton {
+    background: $accentColor !important;
+    color: $darkColor;
+  }
+}
+
+.darkTheme {
+  transition: background 500ms !important;
+  background: linear-gradient(to right bottom, $darkColor, $primaryColor);
+
+  #addInput {
+    background: $darkColor !important;
+  }
+
+  #addButton {
+    background: $accentColor !important;
+    color: $lightColor;
+  }
+
+  .todoBlock {
+    background: $primaryColor;
+    border: none;
+  }
+}
+
+.drop {
+  animation: drop 300ms linear 1 forwards;
+
+  @keyframes drop {
+    from {
+      opacity: 1;
+      transform: translateY(0px) rotate(0deg);
+    }
+    to {
+      transform: translateY(300px) rotate(45deg);
+      opacity: 0;
+    }
+  }
+}
