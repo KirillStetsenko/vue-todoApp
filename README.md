@@ -1,15 +1,35 @@
-# vue-todoApp
+# ToDO App
+
+## A Simple To - Do Website written using Vue 3!
+
 Vue.js to-do list app with theme switching, input validation, task management, and animations. Uses SCSS for styling and local storage for tasks. Focuses on performance and maintainability.
 
-References
-For Fonts: Google Fonts
-For Basic Icons (like Trash and Check buttons): font-awesome
-For Favicon: icons8
-For Color Coordination: w3schools
-For JavaScript (Tutorial): The Net Ninja
-For help with CSS: CSS Tricks
-For more CSS effects: text-effects
-For Type Writing effects: Type-effects
-For Local Storage: Web Dev Simplified Blog
-Contributions
-All contributors are most welcome! This is definitely open source!
+### *Features*:
+
+* User-friendly interface
+* Supports local storage
+* Shows current date, time, and task count
+* Responsive across all devices
+* Three theme options
+
+# *References*
+
+* Fonts: [Google Fonts](https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap)
+* Icons (like Trash and Check buttons): [font-awesome](https://fontawesome.com)
+
+# *Contributions*
+
+- All contributors are most welcome! This is definitely open source!
+
+## *WEBSITE DEMO*
+
+!
+![Screenshot 1](https://github.com/user-attachments/assets/1b20ce7f-92f5-4722-86a3-e543caf9e3cc)
+
+![Screenshot 2](https://github.com/user-attachments/assets/5f22d5e0-3e1c-4d09-95c4-00df7b545848)
+
+![Screenshot 3](https://github.com/user-attachments/assets/489464c6-d171-4bc5-a674-d8305f8822a0)
+
+![Screenshot 4](https://github.com/user-attachments/assets/5c41b6dd-6973-470d-86fc-8c05b6ff16b9)
+
+
