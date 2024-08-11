@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # vue-tudo
 
 ## Project setup
@@ -59,4 +59,4 @@ Vue.js to-do list app with theme switching, input validation, task management, a
 ![Screenshot 4](https://github.com/user-attachments/assets/5c41b6dd-6973-470d-86fc-8c05b6ff16b9)
 
 
->>>>>>> 4073fba9286ed20e435aa786e84d65887dbf3e96
+4073fba9286ed20e435aa786e84d65887dbf3e96
