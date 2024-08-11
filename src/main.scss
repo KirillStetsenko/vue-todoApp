@@ -11,6 +11,12 @@ $inputTextColor: black;
 $buttonBgColorDark: #1a2f38;
 $cursorColorDarker: #01394c;
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .wrapper {
   position: absolute;
   display: flex;
@@ -33,6 +39,23 @@ $cursorColorDarker: #01394c;
     justify-content: flex-end;
     margin: 30px;
 
+    .defaultThemeButton,
+    .lightThemeButton,
+    .darkThemeButton {
+      width: 40px;
+      height: 40px;
+      margin: 5px;
+      border-radius: 50%;
+      border: 1px solid #222;
+      transition: transform 50ms ease, box-shadow 200ms ease-in-out;
+
+      &:hover {
+        transform: scale($hoverScale);
+        box-shadow: 0px 0px 2px 2px $shadowColor;
+        cursor: pointer;
+      }
+    }
+
     .defaultThemeButton {
       background: linear-gradient(to right, $secondaryColor, $primaryColor);
       color: red;
@@ -44,20 +67,6 @@ $cursorColorDarker: #01394c;
 
     .darkThemeButton {
       background: linear-gradient(to right, $darkColor, $primaryColor);
-    }
-
-    button {
-      width: 40px;
-      height: 40px;
-      margin: 5px;
-      border-radius: 50%;
-      border: 1px solid #222;
-      transition: transform 50ms ease;
-
-      &:hover {
-        transform: scale($hoverScale);
-        box-shadow: 0px 0px 2px 2px $shadowColor;
-      }
     }
   }
 
@@ -114,6 +123,7 @@ $cursorColorDarker: #01394c;
       border-radius: 25px 0 0 25px;
       background: $darkColor;
       color: $lightColor;
+      transition: background-color 200ms ease-in-out;
     }
 
     #addButton {
@@ -121,6 +131,7 @@ $cursorColorDarker: #01394c;
       font-size: 18px;
       border: none;
       border-radius: 0 25px 25px 0;
+      transition: background-color 200ms ease-in-out;
     }
   }
 
@@ -254,5 +265,105 @@ $cursorColorDarker: #01394c;
       transform: translateY(300px) rotate(45deg);
       opacity: 0;
     }
+  }
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .appBlock {
+    width: 100%;
+
+    .themeBlock {
+      justify-content: center;
+      margin: 20px 0;
+    }
+
+    .titleBlock {
+      width: 60% !important;
+      font-size: 32px;
+      letter-spacing: 3px;
+      padding: 10px;
+      border-right: none;
+      white-space: normal;
+    }
+
+    .inputBlock {
+      flex-direction: column;
+      align-items: center;
+
+      #addInput {
+        width: 100%;
+        font-size: 16px;
+        padding: 14px;
+        border-radius: 25px;
+        margin-bottom: 10px;
+      }
+
+      #addButton {
+        width: 100%;
+        font-size: 16px;
+        border-radius: 25px;
+      }
+    }
+
+    .todoBlock {
+      flex-direction: column;
+      padding: 10px;
+      border-radius: 20px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .titleBlock {
+    font-size: 20px;
+    letter-spacing: 2px;
+    padding: 5px;
+  }
+
+  .inputBlock {
+    #addInput {
+      font-size: 14px;
+      padding: 12px;
+    }
+
+    #addButton {
+      font-size: 14px;
+    }
+  }
+
+  .todoBlock {
+    width: 100%;
+    padding: 8px;
+    border-radius: 15px;
+  }
+}
+
+@media (max-width: 375px) {
+  .titleBlock {
+    font-size: 20px;
+    letter-spacing: 1px;
+    padding: 0;
+  }
+
+  .inputBlock {
+    #addInput {
+      font-size: 12px;
+      padding: 10px;
+    }
+
+    #addButton {
+      font-size: 12px;
+    }
+  }
+
+  .todoBlock {
+    width: 100%;
+    padding: 6px;
+    border-radius: 12px;
   }
 }
